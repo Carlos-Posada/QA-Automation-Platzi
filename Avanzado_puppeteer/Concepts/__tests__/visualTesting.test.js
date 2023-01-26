@@ -56,7 +56,7 @@ describe('Visual testing', () =>{
             })
         });
 
-         //Remove image before snapshot
+         //Remove image before snapshot, ejecutar comentando y descomentando el await evaluate
          test('Remove image before snapshot ', async () => {
             
             await page.waitForSelector('img')

@@ -1,0 +1,23 @@
+{
+  "name": "my-own-framework",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest  --forceExit"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@babel/core": "^7.20.12",
+    "@babel/preset-env": "^7.20.2",
+    "babel-jest": "^29.4.1",
+    "jest": "^29.4.1",
+    "jest-puppeteer": "^6.2.0",
+    "puppeteer": "^19.6.1"
+  },
+  "devDependencies": {
+    "prettier": "^2.8.3"
+  }
+}

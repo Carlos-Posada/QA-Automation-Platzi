@@ -5,13 +5,14 @@
   "main": "index.js",
   "scripts": {
     "test": "jest --forceExit",
-    "test-devices":"jest --forceExit --detectOpenHandles __tests__/emulacionDispositivos.test.js",
+    "test-devices": "jest --forceExit --detectOpenHandles __tests__/emulacionDispositivos.test.js",
     "visual-tests": "jest --updateSnapshot --forceExit --detectOpenHandles __tests__/visualTesting.test.js"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "@axe-core/puppeteer": "^4.6.0",
     "jest": "^29.4.0",
     "jest-image-snapshot": "^6.1.0",
     "puppeteer": "^19.6.0"
