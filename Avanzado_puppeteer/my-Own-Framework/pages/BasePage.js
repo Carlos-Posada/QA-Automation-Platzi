@@ -52,14 +52,15 @@ export default class BasePage{
 
     //dar click
     async click(selector) {
+        console.log(selector)
         try {
-            await page.waitForSelector(selector)
-            await page.click(selector)
+            const element = await page.waitForXPath(selector)
+            await element.click()
         }
         catch (e) {
             try {
-                const element = await page.waitForXPath(selector)
-                await element.click()
+                await page.waitForSelector(selector)
+                await page.click(selector)
             }
             catch (e) {
                 throw new Error(`Error al dar click al selector ${selector}`)
@@ -71,9 +72,10 @@ export default class BasePage{
     async type(selector, text, opts={}){
         try{
             await page.waitForSelector(selector)
+            await page.click(selector,{clickCount: 3})
             await page.type(selector,text,opts)
         }catch(e){
-            throw new Error(`Error al dar escribir en el selector ${selector}`)
+            throw new Error(`Error al escribir en el selector ${selector}`)
         }
     }
 
