@@ -19,4 +19,26 @@ describe('Probando configuracion', () => {
     it('Obteniendo por un class', () => {
         cy.get('.mr-sm-2.form-control')
     });
+
+    it('Usando contains', () => {
+        //Obteniendo por contenido.
+		cy.contains('Reading')
+		cy.contains('.header-wrapper', 'Widgets')
+	});
+
+    it('Usando parent', () => {
+		// Obteniendo el elemento Padre
+		cy.get('input[placeholder="First Name"]').parent()
+		//Obetner los elementos Padres en general
+		cy.get('input[placeholder="First Name"]').parents()
+		// Obten el elemento Padre y el elemento Hijo
+		cy.get('input[placeholder="First Name"]').parents().find('label')
+
+		// Obteniendo el elemento padre y el elemento hijo limitando el padre
+		cy.get('input[placeholder="First Name"]').parents('form').find('label')
+
+		cy.get('form').find('label')
+		//uso incorrrecto de find
+		//cy.find('label')
+	})
 });
