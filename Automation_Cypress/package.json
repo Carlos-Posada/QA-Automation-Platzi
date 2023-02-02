@@ -4,7 +4,12 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "cypress open"
+    "test:ui": "cypress open",
+    "test:headless": "cypress run",
+    "test:headless:chrome": "cypress run --browser chrome",
+    "test:headless:firefox": "cypress run --browser firefox",
+    "test:headless:firefox:test_1": "cypress run --browser firefox --spec cypress/integration/primerPrueba.spec.js"
+
   },
   "keywords": [],
   "author": "",

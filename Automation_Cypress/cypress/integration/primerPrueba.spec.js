@@ -1,4 +1,4 @@
-describe('Primer Suite de Pruebas', () => {
+describe('Primer Suite de Pruebas',{browser:'chrome'}, () => {
 
     describe('Primer Suite de Pruebas', () => {
         it('primer prueba', () => {
