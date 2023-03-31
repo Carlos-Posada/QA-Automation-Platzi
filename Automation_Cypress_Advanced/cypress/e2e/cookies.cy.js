@@ -5,6 +5,9 @@ Cypress.Cookies.defaults({
 
 describe('COOKIES', function (){
 
+    before(() =>{
+        cy.clearCookies()
+    })
     after(() => {
         cy.clearCookie("nombre")
     })
